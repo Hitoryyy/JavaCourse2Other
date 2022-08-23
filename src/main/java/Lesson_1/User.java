@@ -1,6 +1,6 @@
 package Lesson_1;
 
-public class User {
+public abstract class User {
     private int id;
     private String name;
     private int age;
@@ -43,6 +43,8 @@ public class User {
         }
         //  complex logic
     }
+
+    public abstract void doAction();
 
     String info() {
         return this.toString();
