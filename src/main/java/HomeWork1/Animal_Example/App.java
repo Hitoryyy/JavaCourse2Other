@@ -1,6 +1,7 @@
 package HomeWork1.Animal_Example;
 
 public class App {
+
     public static void main(String[] args) {
         Animal animal = new Animal("Дружок");
         Cat cat = new Cat("Том", "white");
@@ -28,5 +29,15 @@ public class App {
         if (animal1 instanceof Animal) {
             System.out.println("В animal действительно лежит пёс");
         }
+
+        System.out.println();
+
+
+
+        System.out.println(cat);
+        System.out.println(cat1);
+        System.out.println(cat.hashCode());
+        System.out.println(cat1.hashCode());
+
     }
 }

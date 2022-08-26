@@ -2,6 +2,7 @@ package HomeWork1.Animal_Example;
 
 public class Cat extends Animal {
     private String color;
+    private int age;
 
 //    public Cat(String name, String color) {
 //        this.setName(name);
@@ -17,6 +18,10 @@ public class Cat extends Animal {
         this.color = color;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public void catInfo() {
         System.out.println("Кот: " + super.getName() + " цвет: " + color);
     }
@@ -29,5 +34,15 @@ public class Cat extends Animal {
     @Override
     void voice() {
         System.out.println("Кот мяукнул");
+    }
+
+    @Override
+    public String toString() {
+        return "Cat: " + getName();
+    }
+
+    @Override
+    public int hashCode() {
+        return getName().hashCode() + age * 71;
     }
 }
