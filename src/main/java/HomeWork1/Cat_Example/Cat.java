@@ -57,4 +57,9 @@ public class Cat {
         System.out.println("Вес кота " + name + " после кормёжки: " + weight);
         return weight;
     }
+
+    public static int sumCat(int a, int b) {
+        int c = a + b;
+        return c;
+    }
 }

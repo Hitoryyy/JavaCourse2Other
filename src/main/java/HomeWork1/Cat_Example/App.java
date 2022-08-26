@@ -27,5 +27,11 @@ public class App {
 
         //cat3.putMeInArray(cats, 2);
         cat.feed(3);
+
+        System.out.println();
+
+        int i = 10;
+        int j = 7;
+        System.out.println(Cat.sumCat(i, j));
     }
 }
