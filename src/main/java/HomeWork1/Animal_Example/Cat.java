@@ -45,4 +45,16 @@ public class Cat extends Animal {
     public int hashCode() {
         return getName().hashCode() + age * 71;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if  (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Cat another = (Cat) obj;
+        return this.age == another.age && this.getName().equals(another.getName());
+    }
 }

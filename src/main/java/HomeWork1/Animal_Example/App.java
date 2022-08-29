@@ -39,5 +39,12 @@ public class App {
         System.out.println(cat.hashCode());
         System.out.println(cat1.hashCode());
 
+        System.out.println();
+
+        Cat cat2 = new Cat("Мурзик", "Blue");
+        Cat cat3 = new Cat("Мурзик", "Blue");
+
+        System.out.println(cat2.equals(cat3));
+
     }
 }
