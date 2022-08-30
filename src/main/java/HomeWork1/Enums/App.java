@@ -2,7 +2,8 @@ package HomeWork1.Enums;
 
 public class App {
     public static void main(String[] args) {
-//        Fruit fruit = Fruit.APPLE;
+//       Fruit fruit = Fruit.APPLE;
+//       Fruit fruit1 = Fruit.BANANA;
 //        System.out.println(fruit);
 //
 //        if (fruit == Fruit.APPLE) {
