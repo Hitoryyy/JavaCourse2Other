@@ -29,43 +29,32 @@ public class MyExc {
 
         String arr[][];
 
-        arr = new String[][]{{"2", "4", "5", "2"}, {"2", "4", "7", "1"}, {"6", "4", "1", "9"}, {"6", "73", "12", "3"}};
+        arr = new String[][]{{"2", "4", "5", "2"}, {"2", "4", "7", "1"},
+                             {"6", "4", "1", "e9"}, {"6", "3", "12", "3"}};
 
         createDoArray(arr);
-        parseStringToInt(arr);
+
+        System.out.println();
+
     }
 
-
-    static String[][] createDoArray(String[][] array) throws MyArraySizeException {
+    static String[][] createDoArray(String[][] array) throws MyArraySizeException, MyArrayDateException {
 
         if (array.length < 4 || array.length > 4) {
             throw new MyArraySizeException(array);
         }
-
-        for (String[] a : array) {
-            System.out.println(Arrays.toString(a));
-        }
-
-        System.out.println();
-
-        return array;
-    }
-
-    static String[][] parseStringToInt(String[][] array) throws MyArrayDateException {
-
+        int summ = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 try {
-                    Integer.parseInt(array[i][j]);
+                   summ += Integer.parseInt(array[i][j]);
                 } catch (NumberFormatException exception) {
                     throw new MyArrayDateException(array);
                 }
             }
         }
-        for (String[] a : array) {
-            System.out.println(Arrays.toString(a));
-        }
-
+        System.out.println(Arrays.deepToString(array));
+        System.out.println("Сумма всех элементов массива равна: " + summ);
         return array;
     }
 }
