@@ -38,7 +38,7 @@ public class MyExc {
 
     }
 
-    static boolean isString(String[][] array) {
+    static boolean isString(String[][] array) throws MyArrayDateException {
         try {
             for (int i = 0; i < array.length; i++) {
                 for (int j = 0; j < array[i].length; j++) {
@@ -46,7 +46,8 @@ public class MyExc {
                 }
             }
             return true;
-        } catch (NumberFormatException exception) {
+        } catch (MyArrayDateException exception) {
+            exception.printStackTrace();
             return false;
         }
     }
