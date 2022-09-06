@@ -30,7 +30,7 @@ public class MyExc {
         String arr[][];
 
         arr = new String[][]{{"2", "4", "5", "2"}, {"2", "4", "7", "1"},
-                             {"6", "4", "1", "e9"}, {"6", "3", "12", "3"}};
+                {"6", "4", "1", "9"}, {"6", "3", "12", "3"}};
 
         createDoArray(arr);
 
@@ -38,17 +38,32 @@ public class MyExc {
 
     }
 
+    static boolean isString(String[][] array) {
+        try {
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array[i].length; j++) {
+                    Integer.parseInt(array[i][j]);
+                }
+            }
+            return true;
+        } catch (NumberFormatException exception) {
+            return false;
+        }
+    }
+
+
     static String[][] createDoArray(String[][] array) throws MyArraySizeException, MyArrayDateException {
 
         if (array.length < 4 || array.length > 4) {
             throw new MyArraySizeException(array);
         }
+
         int summ = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                try {
-                   summ += Integer.parseInt(array[i][j]);
-                } catch (NumberFormatException exception) {
+                if (isString(array)) {
+                    summ += Integer.parseInt(array[i][j]);
+                } else {
                     throw new MyArrayDateException(array);
                 }
             }
