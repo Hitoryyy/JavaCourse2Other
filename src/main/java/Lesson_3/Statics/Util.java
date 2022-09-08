@@ -22,7 +22,5 @@ public class Util {
     public static void main(String[] args) {
 //        System.out.println(getDistance(2,7, 5,9));
         System.out.println(getDistance(6,2,7,1));
-
-
     }
 }
