@@ -26,6 +26,9 @@ public class ListApp {
             }
         }
 
+        Object[] objects = list.toArray();
+
+
         Collections.sort(list);
     }
 }
