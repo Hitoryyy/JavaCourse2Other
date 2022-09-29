@@ -27,7 +27,7 @@ public class ListWords {
         for (String w : words) {
             j++;
         }
-            System.out.println("Все значения: " + words + "\n" + " количество: " + j);
+        System.out.println("Все значения: " + words + "\n" + " количество: " + j);
         System.out.println();
 
         HashSet<String> wordsUnique = new HashSet<>(words);
@@ -38,6 +38,5 @@ public class ListWords {
         }
         System.out.println("Уникальные значения: " + wordsUnique + "\n" + " колчество: " + i);
     }
-
 
 }
