@@ -36,10 +36,7 @@ public class WordApp {
             if (!words2.contains(word11)) {
                 words2.add(word11);
             }
-
         }
         System.out.println("No duplicate ArrayList:\n" + words2);
-
-
     }
 }
