@@ -38,5 +38,8 @@ public class WordApp {
             }
         }
         System.out.println("No duplicate ArrayList:\n" + words2);
+        System.out.println();
+
+
     }
 }

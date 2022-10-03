@@ -26,17 +26,21 @@ public class WordsApp {
         System.out.println("Массив без дубликатов: \n" + arrayAppList1);
         System.out.println();
 
-        Map<Integer, String> mapDuplicate = new HashMap<>();
-        int indexKeyDuplicate = 0;
-        int countDuplicate = 0;
+//        Map<Integer, String> mapDuplicate = new HashMap<>();
+//        int indexKeyDuplicate = 0;
+//
+//        for (String valueDuplicate : arrayApp) {
+//            indexKeyDuplicate++;
+//            mapDuplicate.put(indexKeyDuplicate, valueDuplicate);
+//        }
+//        System.out.println(mapDuplicate);
+//        System.out.println();
 
-        for (String valueDuplicate : arrayApp) {
-            indexKeyDuplicate++;
-            mapDuplicate.put(indexKeyDuplicate, valueDuplicate);
+        Map<String, Integer> mapValue = new HashMap<>();
+        for (String valueMap : arrayApp) {
+            int newValue = mapValue.getOrDefault(valueMap, 0) + 1;
+            mapValue.put(valueMap, newValue);
         }
-        System.out.println(mapDuplicate);
-
-
+        System.out.println("Количество дубликатов в массиве: \n" + mapValue);
     }
-
 }
