@@ -1,6 +1,6 @@
 package HomeWork3.ArrayList.Phonebook;
 
-import java.util.Objects;
+import java.util.*;
 
 public class Catalog {
 
@@ -48,5 +48,6 @@ public class Catalog {
     public int hashCode() {
         return Objects.hash(surname, telephoneNumber);
     }
+
 
 }
