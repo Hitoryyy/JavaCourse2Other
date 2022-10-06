@@ -18,17 +18,26 @@ public class PhonebookApp {
         Catalog contacts7 = new Catalog("Tom", 1414242145);
 
 
-//        Catalog[] arrayContacts = new Catalog[]{contact, contact1, contact2,
-//                contact3, contact4, contact5, contact6};
+        Catalog[] arrayContacts = new Catalog[]{contact, contact1, contact2,
+                contact3, contact4, contact5, contact6};
 
         ArrayList<Catalog> listContacts = new ArrayList<>();
 
-//        for (Catalog c : arrayContacts) {
-//            listContacts.add(c);
-//        }
+        for (Catalog c : arrayContacts) {
+            listContacts.add(c);
+        }
 //        System.out.println(listContacts);
 
         Map<String, Long> mapContacts = new HashMap<>();
+
+        for (Catalog c: arrayContacts) {
+            mapContacts.put(c.getSurname(), c.getTelephoneNumber());
+        }
+
+
+
+        System.out.println(mapContacts);
+
 
     }
 }
